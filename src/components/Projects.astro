@@ -1,0 +1,56 @@
+---
+import HTML from '../components/icons/HTML.astro'
+import ASTRO from '../components/icons/ASTRO.astro'
+const TAGS = {
+  HTML: {
+    name: "HTML5",
+    class: "bg-black text-white",
+    image: HTML,
+  },
+
+  ASTRO: {
+    name: "ASTRO",
+    class: "bg-white text-black",
+    image: ASTRO,
+  },
+
+};
+
+const PROJECTS = [
+  {
+    title: "Vitael Consciente",
+    description:
+      "Estamos trabajando en la construccion de la pagina para poder brindarles la mejor informacion",
+    link: "https://vitaleconsciente.com/",
+    github: "#",
+    image: "/projects/vitaleImage.webp",
+    tags: [TAGS.HTML, TAGS.ASTRO,],
+  },
+];
+---
+<div class="flex flex-col gap-y-16">
+    {
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+        <article >
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+            {tags.map((tag) =>( 
+            <li>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                    <tag.image class="size-4"/>
+                    {tag.name}
+                </span>
+            </li>
+            ))}
+        </ul>
+        <img
+            class="rounded shadow-2xl shadow-white/10"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        
+        </article>
+    ))
+    }
+</div>

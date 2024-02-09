@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Enero 2022",
+    title: "Intern web developer Frontend",
+    company: "Growth Acceleration Partners",
+    description:
+      "Responsable de las aplicaciones internas en la parte de Frontend. Aporté con la creación de una guía de estilos para uniformizar todas las aplicaciones internas. También serví de asesorar nuevos practicantes en la parte de frontend.",
+  },
+]
+---
+
+<ol class="relative mt-13">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

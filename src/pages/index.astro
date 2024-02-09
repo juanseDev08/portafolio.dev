@@ -1,0 +1,75 @@
+---
+import GitHub from '../components/icons/GitHub.astro'
+import LinkedIn from '../components/icons/LinkedIn.astro'
+import Briefcase from '../components/icons/Briefcase.astro'
+import Badge from '../components/Badge.astro';
+import Layout from '../layouts/Layout.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Mail from '../components/icons/Mail.astro'
+import Expirience from '../components/Expirience.astro';
+import SectionContainer from '../components/SectionContainer.astro'
+import Code from '../components/icons/Code.astro'
+import Projects from '../components/Projects.astro'
+
+---
+
+<Layout title="Porfolio de JuansesDev - Desarrollador y Programador Web" description="Contrata a juansesDev para desarrollar tus aplicativos web con una potente parte frontend.">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+				<img class="rounded-full size-12 mb-4" 
+					src="https://media.licdn.com/dms/image/D4E03AQGjClokv-h-wQ/profile-displayphoto-shrink_800_800/0/1666978906531?e=2147483647&v=beta&t=o9COUMWWysnso9IyGWUsnpw1tb9AZUj9CjZuVnGBN_w" 
+					alt="Juansesdev photo">
+				<h1 class="text-white text-3xl lg:text-5xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"> Hey, soy Juansesdev 
+					<a class="flex justify-center items-center"
+						href="https://www.linkedin.com/in/juan-sebasti%C3%A1n-san%C3%ADn-villarreal-319584225/" 
+						target="_blank" 
+						rel="noopener">
+						<Badge>Disponible para trabajar</Badge>
+					</a>
+					
+				</h1>
+				
+				<h2 class="text-xl:text-2xl text-wrap max-w-[700px]">
+					<span> +6 meses de experiencia.</span>
+					<span class="text-yellow-200/90">Desarrollador web, front-end.</span>
+					<span class="text-green-300"> De Quindio/Colombia.</span>
+					<span class="opacity-70"> Especializado en front-end y la experiencia del usuario</span>
+				</h2>
+				<nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill href="https://www.linkedin.com/in/juan-sebasti%C3%A1n-san%C3%ADn-villarreal-319584225/">
+						<LinkedIn class="size-4 md:size-6" />
+							LinkedIn
+					</SocialPill>
+
+					<SocialPill href="https://github.com/juanseDev08">
+						<GitHub class="size-4 md:size-6" />
+							GitHub
+					</SocialPill>
+					<SocialPill href="mailto:juanses081@gmail.com">
+						<Mail class="size-4 md:size-6" />
+							juanses081@gmail.com
+					</SocialPill>
+				</nav>
+		</SectionContainer>
+		
+		<SectionContainer id="experiencia">
+			
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"> 
+				<Briefcase class="size-6"/> 
+				Experiencia laboral
+			</h2>
+			<Expirience/>
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"> 
+				<Code class="size-6"/> 
+				Proyectos
+			</h2>
+			<Projects/>
+		</SectionContainer>
+	</main>
+</Layout>
+
+
